@@ -9,12 +9,18 @@ public class Account {
     private String firstName;
     private String lastName;
 
+    public Account() {
+        this.id = ++Account.lastId;
+        this.firstName = "Unknown";
+    }
+
 
 
 
     public Account(String firstName,String lastName) {
-        this.id = ++lastId;
-        this.firstName = firstName;
+        this();
+        setFirstName(firstName);
+        setLastName(lastName);
         this.lastName = lastName;
     }
 
@@ -22,7 +28,16 @@ public class Account {
      * Setsetname
      * set the last so you cant have a null name so it can assign you an id number
      */
-    public void setlastName (String lastName) {
+
+    public void setFirstName (String firstName) {
+        if (firstName == null || firstName.isEmpty())
+            throw new IllegalArgumentException("Invalid last name! Name can't be blank for id: " + id);
+        else
+            this.firstName = firstName;
+    }
+
+
+    public void setLastName (String lastName) {
         if (lastName == null || lastName.isEmpty())
             throw new IllegalArgumentException("Invalid last name! Name can't be blank for id: " + id);
         else
