@@ -8,6 +8,8 @@ public class Account {
     private int id;
     private String firstName;
     private String lastName;
+    private double balance = 0.0; // set the default balance to 0
+
 
     public Account() {
         this.id = ++Account.lastId;
@@ -42,6 +44,15 @@ public class Account {
             throw new IllegalArgumentException("Invalid last name! Name can't be blank for id: " + id);
         else
             this.lastName = lastName;
+    }
+
+    /**
+     * new method to get balance
+     * @return
+     */
+
+    public double getBalance() {
+        return balance;
     }
 
     public String getFullName() {
