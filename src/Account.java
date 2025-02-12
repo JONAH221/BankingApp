@@ -4,6 +4,7 @@ public class Account {
      * New int (lastId = 0) Each time a new account object is created, increments
      * Lastaccountnumber/ lastId then assigning it to new account accountId
      */
+
     private static int lastId = 0;
     private int id;
     private String firstName;
@@ -80,10 +81,12 @@ public class Account {
 
     public void withdrawal(double amount) {
         if (amount <= 0) {
-            throw new IllegalArgumentException("Invalid amount! Withdrawl amount must be greater than zero.");
+            throw new IllegalArgumentException("Invalid amount! Withdrawal amount must be greater" +
+                    " than zero.");
         }
         if (amount > balance) {
-            throw new IllegalArgumentException("Insufficient funds! Withdrwal amount cannot be greater than account balance.");
+            throw new IllegalArgumentException("Insufficient funds! Withdrawal amount cannot be " +
+                    "greater than account balance.");
         }
         balance -= amount;
     }
