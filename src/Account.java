@@ -55,6 +55,39 @@ public class Account {
         return balance;
     }
 
+    /**
+     * deposit method
+     * takes amount from the input.
+     * if the amount is less than or equal to zero it will throw an IllegalArgumentException.
+     * if the input is valid it adds deposit amount to the balance.
+     * @param amount
+     */
+
+    public void deposit(double amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("Invalid amount! Deposit amount must be greater than zero.");
+        }
+        balance += amount;
+    }
+
+    /**
+     * takes in a amount as input.
+     * if the amount is less than or equal to zero throws an IllegalArgumentException
+     * it will throw another error if the withdrawal amount is greater than the current balance.
+     * if the input is valid it will subttract the withdrawal amount from the balance.
+     * @param amount
+     */
+
+    public void withdrawal(double amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("Invalid amount! Withdrawl amount must be greater than zero.");
+        }
+        if (amount > balance) {
+            throw new IllegalArgumentException("Insufficient funds! Withdrwal amount cannot be greater than account balance.");
+        }
+        balance -= amount;
+    }
+
     public String getFullName() {
         return firstName + " " + lastName;
     }
