@@ -21,7 +21,7 @@ If withdrawal enter the amount you want to withdrawal
 After you are complete with all processes click q to quit the program and it will give you a ending balance
 
 Authors
-Jonathan Sosa & Garrett Finke
+Jonah Zuehlke & Garrett Finke
 
 Version History
 0.1
