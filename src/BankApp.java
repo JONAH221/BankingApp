@@ -165,6 +165,13 @@ public class BankApp {
 
             System.out.println();
         }
+        System.out.println(SINGLE_DASH_LINE);
+        System.out.printf("Final balance for %s: %,.2f\n", account.getFullName(), account.getBalance());
+        System.out.println("Thank you for using the Bank App!");
+        System.out.println(SINGLE_DASH_LINE);
+
+        // Close the scanner to free up resources
+        sc.close();
 
     } // end of main
 
