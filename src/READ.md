@@ -9,27 +9,29 @@ Getting Started
 Dependencies
 Amazon Correto V17
 Intelij 2024
+
 Installing
-Find someone that has the code
+Can clone the repository from github by requesting it from one of the creators.
 Executing program
 Open Program
-Enter Items
-Enter Amount
-Enter Price
-Select No when ready
-Shows You receipt and Discounts
+Enter Your First then Last name
+It will the prompt you to either withdrawal, deposit, or leave the program.
+Enter the Amount you would like to deposit.
+If withdrawal enter the amount you want to withdrawal
+After you are complete with all processes click q to quit the program and it will give you a ending balance
+
 Authors
 Jonathan Sosa & Garrett Finke
 
 Version History
-0.2
-Added Discounts
 0.1
 Initial Release
+February 13, 2025
 License
-This project is licensed under the [Jonathan Sosa & Garrett Finke] License - see the LICENSE.md file for details
+This project is licensed under the [Jonah Zuehlke & Garrett Finke] License - see the LICENSE.md file for details
 
 Acknowledgments
 Inspiration, code snippets, etc.
 
-Debbie's Code
+Staring code Give by the best Teacher Debbie Johnson
+The reset made with sheer will power and love.
