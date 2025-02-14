@@ -47,8 +47,10 @@ public class Tester {
             System.out.println("Error during deposit: " + e.getMessage()); // Expect an error message
         }
 
-        // Final state of both accounts
-        System.out.println("\nFinal Account 1 Balance: " + account1.getBalance()); // 300.0
-        System.out.println("Final Account 2 Balance: " + account2.getBalance()); // 1000.0
+        System.out.println("\nFinal Balances:");
+        System.out.println(account1);
+        System.out.println("Balance: " + account1.getBalance());
+        System.out.println(account2);
+        System.out.println("Balance: " + account2.getBalance());
     }
 }

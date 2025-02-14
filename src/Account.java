@@ -90,7 +90,10 @@ public class Account {
         }
         balance -= amount;
     }
-
+    @Override
+    public String toString() {
+        return "Account ID: " + id + ", Name: " + getFullName();
+    }
     public String getFullName() {
         return firstName + " " + lastName;
     }
