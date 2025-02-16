@@ -1,3 +1,15 @@
+/**
+ * Represents a bank account with a unique ID, a first and last name, and a balance.
+ *
+ * This class provides functionality to deposit, withdraw, and check balance.
+ * Each time an account is created it receives a unique account ID. The ID increments
+ * each new account created.
+ *
+ * GitHub Repository: https://github.com/JONAH221/BankingApp
+ *
+ * @author Jonah Zuehlke, Garrett Finke
+ * @version 2.0
+ */
 public class Account {
 
     /**
@@ -48,8 +60,8 @@ public class Account {
     }
 
     /**
-     * new method to get balance
-     * @return
+     * Retrieves the current balance of the account.
+     * @return The balance of the account.
      */
 
     public double getBalance() {
@@ -57,11 +69,9 @@ public class Account {
     }
 
     /**
-     * deposit method
-     * takes amount from the input.
-     * if the amount is less than or equal to zero it will throw an IllegalArgumentException.
-     * if the input is valid it adds deposit amount to the balance.
-     * @param amount
+     * Deposits an amount into the account. The amount must be greater than zero.
+     * @param amount The amount to deposit.
+     * @throws IllegalArgumentException if the amount is less than or equal to zero.
      */
 
     public void deposit(double amount) {
@@ -72,11 +82,11 @@ public class Account {
     }
 
     /**
-     * takes in a amount as input.
-     * if the amount is less than or equal to zero throws an IllegalArgumentException
-     * it will throw another error if the withdrawal amount is greater than the current balance.
-     * if the input is valid it will subttract the withdrawal amount from the balance.
-     * @param amount
+     * Withdraws an amount from the account. The amount must be greater than zero and less than
+     * or equal to the balance.
+     * @param amount The amount to withdraw
+     * @throws IllegalArgumentException if the amount is less than or equal to zero or greater
+     * than the current balance.
      */
 
     public void withdrawal(double amount) {
@@ -90,19 +100,31 @@ public class Account {
         }
         balance -= amount;
     }
+
+    /**
+     * Returns a string representation of the account, including the account ID and full name.
+     *@return A string representation of the account.
+     */
+
     @Override
     public String toString() {
         return "Account ID: " + id + ", Name: " + getFullName();
     }
+
+    /**
+     * Retrieves the full name of the account holder (first and last name).
+     * @return The full name of the account holder.
+     */
     public String getFullName() {
         return firstName + " " + lastName;
     }
 
+    /**
+     * Retrieves the account ID.
+     * @return The account ID.
+     */
     public int getAccountId() {
         return id;
     }
 
-    public String getAccountName() {
-        return firstName;
-    }
 }

@@ -62,7 +62,7 @@ public class BankApp {
         }
     } // end createAccount
 
-    /**
+  /**
      * Validate that the user's input is a valid currency amount up to 2 decimal positions
      * @param input User's input.
      * @return True is valid, and False if invalid currency entered
